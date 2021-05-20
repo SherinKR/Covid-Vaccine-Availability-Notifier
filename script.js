@@ -107,8 +107,8 @@ function getSessions(sessions) {
                 
                 sessionsData +=
                     `<h4> Sessions </h4>
-                	<h4 class="text-primary">Available Capacity : ${session.available_capacity} 
-                    <span class="badge badge-success"> <a href='https://selfregistration.cowin.gov.in/' target="_blank">Book Now</a> </span> 
+                	<h4 class="text-primary">Available Capacity : ${session.available_capacity}
+                    <span ><a class="badge bookBtn" href='https://selfregistration.cowin.gov.in/' target="_blank">Book Now</a></span> 
                     </h4>                    
                 	<span>${getSlots(session)}</span>`
             }

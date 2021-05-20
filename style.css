@@ -1,6 +1,9 @@
 html {
     position: relative;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
     min-height: 100%;
 }
 body {
@@ -14,4 +17,14 @@ body {
     line-height: 60px;
     background-color: #f5f5f5;
     text-align: center;
+}
+.bookBtn{
+    color: #fff;
+    background-color: #28a745;
+}
+.social{
+    color: black;
+}
+.social:hover{
+    color: black;
 }
