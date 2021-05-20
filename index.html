@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid-19 Vaccine Availability Finder</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="description" content="Covid-19 Vaccine Availability Finder">
+        <meta name="keywords" content="covid, vaccine, vaccineavailability,Codeuniq, codeuniq, code uniq">
+        <meta name="author" content="Sherin K R">
+        <link href="files/favicon.png" rel="icon">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLFH7YHQ85"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Covid-19 Vaccine Availability Finder</a>
+        </nav>
+        <div class="container mb-5">
+            <div>
+                <div class="form-group">
+                    <label for="states">Select State</label>
+                    <select id="states" class="form-control" onchange=getDistricts()></select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Select District</label>
+                    <select id="district" class="form-control" ></select>
+                </div>
+                <button onclick="getAvailability()" class="btn btn-primary btn-lg btn-block" id="searchButton">Search</button>
+                <button onclick="resetSearch()" class="btn btn-primary btn-lg btn-block" id="resetButton" style="display: none;">Reset</button>
+            </div>
+            <br><br>
+            <div id="alert" class="alert alert-primary" role="alert" style="display: none;">
+                <div class="row">
+                    <div class="col"> Not Available!
+                        <br>
+                        Retrying in <span id="timer"></span>sec<br>
+                    </div>
+                    <div class="col">
+                        <span class="float-right">Attempt Count:<span id="attemptCount"></span> </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="data" class="mb-5"></div>
+        </div>
+        <footer class="footers">
+            <div class="container">
+                <span class="text-muted"><span style="color:red">&#10084;</span>
+                © Copyright <strong><a href="https://codeuniq.team/">Team Codeuniq</a></strong>.
+                All Rights Reserved
+                </span></br>
+            </div>
+        </footer>
+    </body>
+</html>
