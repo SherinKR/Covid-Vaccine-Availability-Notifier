@@ -81,7 +81,6 @@ function getAvailability() {
                         <h5 class="card-title text-secondary">${element.name} <span class="badge badge-success">${element.fee_type} Vaccine</span></h5>
                         <p><strong>Address </strong> : ${element.address} </p>
                         <p> &#128337; ${element.from} - ${element.to}</p>
-                            
                         <span>${getSessions(element.sessions)}</span>
                     </div>
                 `
@@ -108,7 +107,9 @@ function getSessions(sessions) {
                 
                 sessionsData +=
                     `<h4> Sessions </h4>
-                	<h4 class="text-primary">Available Capacity : ${session.available_capacity}</h4>
+                	<h4 class="text-primary">Available Capacity : ${session.available_capacity} 
+                    <span class="badge badge-success"> <a href='https://selfregistration.cowin.gov.in/' target="_blank">Book Now</a> </span> 
+                    </h4>                    
                 	<span>${getSlots(session)}</span>`
             }
         })
